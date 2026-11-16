@@ -93,7 +93,7 @@ accept Bark Bite##91770 |goto Mount Hyjal 54.05,84.39
 talk Thylaen##265586
 turnin Celastrus the Bitter##91923 |goto Mount Hyjal 54.83,84.56
 step
-kill Fraxinus##248366 |q 91770/1 |goto Mount Hyjal 53.40,84.30
+clicknpc Fraxinus##248366 |q 91770/1 |goto Mount Hyjal 53.40,84.30
 |tip Apply the poultice to Fraxinus, then talk to him
 talk Fraxinus##248366
 turnin Bark Bite##91770 |goto Mount Hyjal 53.40,84.33
@@ -371,36 +371,47 @@ accept Feathers in Flight##95027 |goto Mount Hyjal 15.64,49.99
 step
 talk Veteran of the Third War##255009
 accept Anywhere But Here##92100 |goto Mount Hyjal 20.47,59.26
+|tip He spawns in random spots around Elderwild. If he isn't here, look around the outpost.
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
+|tip Keep an eye on Mirt (15.9, 52.7) while you hand in quests around the outpost. If he offers Ewe Wandered Off, take it.
 step
 click Embroidered Scabbard
 turnin Anywhere But Here##92100 |goto Mount Hyjal 8.73,46.45
 |tip Find the Embroidered Scabbard at the overlook northwest of Elderwild
 accept Battle Recall##96550 |goto Mount Hyjal 8.73,46.45
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
 step
 talk Veteran of the Third War##255038
 turnin Battle Recall##96550 |goto Mount Hyjal 8.80,46.48
 |tip Use the scabbard and talk to the Veteran of the Third War to hear his story
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
 step
 click Unmarked Grave
 accept Disturbed Grave##90702 |goto Mount Hyjal 22.48,48.65
 |tip Click the Unmarked Grave
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
 step
 talk Eluneth##264089
 accept Eyes of the Watchers##90865 |goto Mount Hyjal 18.78,62.01
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
 step
 kill Forgotten Soldier##249247 |q 92449/1 |goto Mount Hyjal 18.00,60.40
 |tip Kill Forgotten Soldiers and Fleshflay Raveners. Raveners drop the Ring of the Fallen Soldier.
 kill Fleshflay Ravener##249228 |q 92449/2 |goto Mount Hyjal 18.00,60.40
 collect Ring of the Fallen Soldier##273642 |q 90702/1 |goto Mount Hyjal 18.00,60.40
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
 step
 collect Watcher's Eye##273322 |q 90865/1 |goto Mount Hyjal 24.50,53.80
 |tip Kill Eternal Sentries for Watcher's Eyes
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
 step
 use Survivor's Torch##274411
 collect Reanimator's Amulet##268573 |q 92591/1 |goto Mount Hyjal 26.60,55.70
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
 step
 talk Eluneth##264089
 turnin Eyes of the Watchers##90865 |goto Mount Hyjal 18.78,62.01
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
 step
 talk Sefira Everbright##244517
 turnin Blight No More##92449 |goto Mount Hyjal 15.67,54.66
@@ -408,18 +419,30 @@ turnin Final Death##92591 |goto Mount Hyjal 15.67,54.66
 turnin Disturbed Grave##90702 |goto Mount Hyjal 15.67,54.66
 accept More Work?##90750 |goto Mount Hyjal 15.67,54.66
 accept To the Summit of Eternity##91688 |goto Mount Hyjal 15.67,54.66
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
 step
 talk Daythor Brellan##264521
 turnin More Work?##90750 |goto Mount Hyjal 15.55,52.07
 accept More of the Same##95218 |goto Mount Hyjal 15.55,52.07
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
 step
 talk Sefira Everbright##244517
 turnin More of the Same##95218 |goto Mount Hyjal 15.67,54.66
 accept Belle's Ring##94832 |goto Mount Hyjal 15.67,54.66
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
 step
 talk Daythor Brellan##264521
 turnin Belle's Ring##94832 |goto Mount Hyjal 15.55,52.07
 |tip Show the ring to Daythor Brellan
+accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72 |opt
+step
+clicknpc Escaped Sheep##265962 |q 96674/1
+|tip If you picked up Ewe Wandered Off, capture the Escaped Sheep around the outpost and bring them back to Mirt. If you didn't, this step skips itself.
+|only if haveq(96674)
+step
+talk Mirt##248419
+turnin Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72
+|only if haveq(96674)
 step
 collect Hyjal Owl Feather##253341 |q 95027/1
 |tip Head south into the valley below Elderwild and collect Hyjal Owl Feathers from owls and their nests

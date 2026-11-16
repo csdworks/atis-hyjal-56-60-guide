@@ -17,6 +17,8 @@ TITLE_ROOT = "Leveling Guides\\\\Ati's Hyjal 56-60 Guide\\\\"
 BREADCRUMBS = {91952, 92842}
 # Optional turn-ins that shouldn't block the step if not ready yet.
 READY_ONLY = set()
+# Creature objectives you interact with rather than kill (Escaped Sheep, Fraxinus' poultice).
+CLICKNPC = {265962, 248366}
 
 _cache = {}
 def get(kind, i):
@@ -92,6 +94,17 @@ def convert_step(lines, pending_tips):
     if "#sticky" in tags:
         pending_tips.extend(clean(l[2:]) for l in lines if l.startswith(">>"))
         return None
+    cw = next((t for t in tags if t.startswith("#completewith ")), None)
+    if cw:
+        # Non-blocking side pickup: becomes an optional goal on each following step
+        opt = []
+        for l in lines:
+            m = re.match(r"\.accept (\d+)", l)
+            if m:
+                q = int(m.group(1)); g = giver(q, False)
+                opt.append(f"accept {quest_name(q)}##{q}{gotostr(g[3]) if g and g[3] else ''} |opt")
+        opt += [f"|tip {clean(l[2:])}" for l in lines if l.startswith(">>")]
+        return ("OPTIONAL", cw.split(None, 1)[1].strip(), opt)
     loc = None
     only = None
     tips = [clean(l[2:]) for l in lines if l.startswith(">>")]
@@ -111,15 +124,22 @@ def convert_step(lines, pending_tips):
             cond = f"rep({m.group(1)})>={m.group(2).capitalize()}"
             only = f"{only} and {cond}" if only else cond
 
+    def need(q):
+        nonlocal only
+        cond = f"haveq({q})"
+        only = f"{only} and {cond}" if only else cond
+
     def add(key, line):
         if key not in talks:
             talks[key] = []; order.append(key)
         talks[key].append(line)
 
     for l in lines:
-        m = re.match(r"\.(accept|turnin) (\d+)", l)
+        m = re.match(r"\.(accept|turnin) (-?\d+)", l)
         if m:
             kind, q = m.group(1), int(m.group(2))
+            if q < 0:  # RXP skip-if-missing
+                q = -q; need(q)
             if kind == "accept" and "#optional" in tags and q in BREADCRUMBS:
                 return None  # optional out-of-zone breadcrumb pickup: skip in Zygor
             g = giver(q, kind == "turnin")
@@ -132,16 +152,20 @@ def convert_step(lines, pending_tips):
                 line += f" |only if readyq({q})"
             add((g[0], g[1], g[2]) if g else None, line)
             continue
-        m = re.match(r"\.complete (\d+),(\d+)", l)
+        m = re.match(r"\.complete (-?\d+),(\d+)", l)
         if m:
             q, i = int(m.group(1)), int(m.group(2))
+            if q < 0:  # RXP skip-if-missing
+                q = -q; need(q)
             objs = objectives(q)
             where = gotostr_rxp(loc) if loc else ""
             if i <= len(objs):
                 verb, kind, oid = objs[i - 1]
                 e = get(kind, oid)
                 nm = s(e["name"]) if e else f"objective {i}"
-                if verb == "click":
+                if verb == "kill" and oid in CLICKNPC:
+                    line = f"clicknpc {nm}##{oid} |q {q}/{i}{where}"
+                elif verb == "click":
                     line = f"click {nm}##{oid} |q {q}/{i}{where}"
                 else:
                     line = f"{verb} {nm}##{oid} |q {q}/{i}{where}"
@@ -209,8 +233,24 @@ def main(src, dst):
              'if UnitFactionGroup("player") ~= "Alliance" then return end',
              '']
     for g in guides:
-        pending = []
-        steps = [st for st in (convert_step(x, pending) for x in g["steps"]) if st]
+        pending, steps, optional = [], [], None
+        for raw in g["steps"]:
+            label = next((l.split(None, 1)[1].strip() for l in raw if l.startswith("#label ")), None)
+            if optional and label == optional[1]:
+                optional = None
+            st = convert_step(raw, pending)
+            if isinstance(st, tuple):
+                optional = st
+                continue
+            if not st:
+                continue
+            if optional:
+                body_lines = st.split("\n")
+                tail = [body_lines.pop()] if body_lines[-1].startswith("|only if") else []
+                st = "\n".join(body_lines + optional[2] + tail)
+                # show the explanatory tip only on the first step it's attached to
+                optional = (optional[0], optional[1], [x for x in optional[2] if not x.startswith("|tip")])
+            steps.append(st)
         header = [f'author="Ati"', f'description="Ati\'s Alliance route through Mount Hyjal: {g["name"].split(" ", 1)[1]}."']
         if g["next"]:
             header.append(f'next="{zygor_title(g["next"])}"')

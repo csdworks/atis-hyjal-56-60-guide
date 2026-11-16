@@ -515,8 +515,14 @@ step
     .accept 95027 >>Accept Feathers in Flight
     .target Hnaz Blunderflame
 step
+    #completewith Sheep
+    >>|cRXP_WARN_Keep an eye on|r |cRXP_FRIENDLY_Mirt|r (15.9, 52.7) while you hand in quests around the outpost. If he offers Ewe Wandered Off, take it.
+    .accept 96674 >>Accept Ewe Wandered Off
+    .target Mirt
+step
     .goto Mount Hyjal,20.47,59.26
     >>Talk to the |cRXP_FRIENDLY_Veteran of the Third War|r
+    >>|cRXP_WARN_He spawns in random spots around Elderwild. If he isn't here, look around the outpost.|r
     .accept 92100 >>Accept Anywhere But Here
     .target Veteran of the Third War
 step
@@ -587,6 +593,14 @@ step
     >>Show the ring to |cRXP_FRIENDLY_Daythor Brellan|r
     .turnin 94832 >>Turn in Belle's Ring
     .target Daythor Brellan
+step
+    #label Sheep
+    >>If you picked up Ewe Wandered Off, capture the |cRXP_FRIENDLY_Escaped Sheep|r around the outpost and bring them back to Mirt. If you didn't, this step skips itself.
+    .complete -96674,1
+step
+    >>Talk to |cRXP_FRIENDLY_Mirt|r
+    .turnin -96674 >>Turn in Ewe Wandered Off
+    .target Mirt
 step
     >>Head south into the valley below Elderwild and collect |cRXP_LOOT_Hyjal Owl Feathers|r from owls and their nests
     .complete 95027,1
