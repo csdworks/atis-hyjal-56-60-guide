@@ -1,0 +1,8 @@
+## Interface: 16001
+## Title: |cff66ccffAti's Hyjal 56-60 Guide|r - RestedXP Compatible
+## Notes: Alliance 56-60 route through Mount Hyjal (WoW Forever) for the RestedXP Guides addon.
+## Author: Ati
+## Version: 0.1.0
+## Dependencies: RXPGuides
+
+AtisHyjalGuide_RXP.lua

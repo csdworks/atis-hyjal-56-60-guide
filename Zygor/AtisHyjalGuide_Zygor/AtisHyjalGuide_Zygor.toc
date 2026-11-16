@@ -1,0 +1,8 @@
+## Interface: 16001
+## Title: |cfff4bf2aAti's Hyjal 56-60 Guide|r - Zygor Compatible
+## Notes: Alliance 56-60 route through Mount Hyjal (WoW Forever) for Zygor Guides Viewer.
+## Author: Ati
+## Version: 0.1.0
+## Dependencies: ZygorGuidesViewerForever
+
+AtisHyjalGuide_Zygor.lua
