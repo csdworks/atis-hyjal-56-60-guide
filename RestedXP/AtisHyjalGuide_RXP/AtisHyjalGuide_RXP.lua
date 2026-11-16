@@ -406,27 +406,19 @@ step
     .accept 93825 >>Accept Barkbound Blessings
     .target Suma Mossmane
 step
-    .goto Mount Hyjal,20.16,77.99
-    >>Talk to |cRXP_FRIENDLY_Fennar Mossmane|r
-    .accept 93828 >>Accept Herbs of the Hollow
-    .accept 93830 >>Accept Water of Hyjal
-    .target Fennar Mossmane
-step
     .goto Mount Hyjal,21.0,78.6
-    >>Talk to |cRXP_FRIENDLY_Dala Fairmaw|r
+    >>Talk to |cRXP_FRIENDLY_Dala Fairmaw|r. Fennar Mossmane's quests need Neutral, so you'll come back for them.
     .accept 93834 >>Accept Burrow Beetles
     .target Dala Fairmaw
 step
-    >>Around Barkskin Burrow, gather |cRXP_LOOT_Moonveil Moss|r, |cRXP_LOOT_Dried Hanging Herbs|r and |cRXP_LOOT_Burrow Beetle Bits|r
+    >>Around Barkskin Burrow, gather |cRXP_LOOT_Moonveil Moss|r and |cRXP_LOOT_Burrow Beetle Bits|r
     .complete 93825,1
-    .complete 93828,1
     .complete 93834,1
 step
     .goto Mount Hyjal,21.4,64.9
-    >>Go to Deadwood Den. Kill |cRXP_ENEMY_Deadwood Totemics|r and |cRXP_ENEMY_Deadwood Fel-Tenders|r. Fill Fennar's waterskin at the pond outside the den.
+    >>Go to Deadwood Den. Kill |cRXP_ENEMY_Deadwood Totemics|r and |cRXP_ENEMY_Deadwood Fel-Tenders|r.
     .complete 93826,1
     .complete 93826,2
-    .complete 93830,1
     .mob Deadwood Totemic
     .mob Deadwood Fel-Tender
 step
@@ -453,35 +445,44 @@ step
     .target Brerufa
 step
     .goto Mount Hyjal,21.8,79.0
-    >>Turn in to the elders and the Mossmanes inside Barkskin Burrow
+    >>Turn in to the elders, Suma Mossmane and Dala Fairmaw inside Barkskin Burrow
     .turnin 93826 >>Turn in Deal Dread to Deadwood
     .turnin 93825 >>Turn in Barkbound Blessings
-    .turnin 93828 >>Turn in Herbs of the Hollow
-    .turnin 93830 >>Turn in Water of Hyjal
     .turnin 93834 >>Turn in Burrow Beetles
-    .target Elder Mistpaw
     .target Elder Pinespeaker
     .target Suma Mossmane
-    .target Fennar Mossmane
     .target Dala Fairmaw
 step
     .goto Mount Hyjal,21.8,79.0
-    >>You should be Neutral with Barkskin Burrow now. Turn in to |cRXP_FRIENDLY_Elder Mistpaw|r, then pick up Wicked Wisdom from |cRXP_FRIENDLY_Elder Pinespeaker|r.
-    >>Still Unfriendly? Skip this step and the next two.
+    >>You should be Neutral with Barkskin Burrow now. Turn in to |cRXP_FRIENDLY_Elder Mistpaw|r, then pick up the quests that needed Neutral from |cRXP_FRIENDLY_Elder Pinespeaker|r and |cRXP_FRIENDLY_Fennar Mossmane|r.
+    >>Still Unfriendly? Skip this step and the next four.
     .turnin 94504 >>Turn in Barkskin Beginnings
     .accept 93833 >>Accept Wicked Wisdom
+    .accept 93828 >>Accept Herbs of the Hollow
+    .accept 93830 >>Accept Water of Hyjal
     .target Elder Mistpaw
     .target Elder Pinespeaker
+    .target Fennar Mossmane
+step
+    >>Collect |cRXP_LOOT_Dried Hanging Herbs|r around Barkskin Burrow
+    .complete 93828,1
 step
     .goto Mount Hyjal,34.8,73.9
     >>Kill |cRXP_ENEMY_Hyjal Owls|r east of the burrow for |cRXP_LOOT_Intact Owl Bodies|r
     .complete 93833,1
     .mob Hyjal Owl
 step
+    .goto Mount Hyjal,21.4,64.9
+    >>Fill Fennar's waterskin at the pond outside Deadwood Den
+    .complete 93830,1
+step
     .goto Mount Hyjal,21.77,79.37
-    >>Talk to |cRXP_FRIENDLY_Elder Pinespeaker|r
+    >>Back in Barkskin Burrow, talk to |cRXP_FRIENDLY_Elder Pinespeaker|r and |cRXP_FRIENDLY_Fennar Mossmane|r
     .turnin 93833 >>Turn in Wicked Wisdom
+    .turnin 93828 >>Turn in Herbs of the Hollow
+    .turnin 93830 >>Turn in Water of Hyjal
     .target Elder Pinespeaker
+    .target Fennar Mossmane
 ]])
 
 -------------------------------------------------------------------------------
