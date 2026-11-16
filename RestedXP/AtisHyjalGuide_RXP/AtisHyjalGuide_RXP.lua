@@ -21,7 +21,7 @@ RXPGuides.RegisterGuide(GROUP, [[
 #version 1
 << Alliance
 #name 56-57 Tainted Foothills
-#next 57-58 Moonglade & Wild Gods
+#next 57-58 Moonglade & Barkskin Burrow
 
 step
     #optional
@@ -272,14 +272,14 @@ step
 ]])
 
 -------------------------------------------------------------------------------
--- 2) 57-58 Moonglade & Wild Gods
+-- 2) 57-58 Moonglade & Barkskin Burrow
 -------------------------------------------------------------------------------
 RXPGuides.RegisterGuide(GROUP, [[
 #forever
 #version 1
 << Alliance
-#name 57-58 Moonglade & Wild Gods
-#next 58-59 Elderwild & Barkskin Burrow
+#name 57-58 Moonglade & Barkskin Burrow
+#next 58-59 Elderwild & Wild Gods
 
 step
     .goto Mount Hyjal,73.34,81.88
@@ -324,94 +324,175 @@ step
     .target Ketharas
 step
     .goto Mount Hyjal,48.3,85.7
-    >>Talk to the |cRXP_FRIENDLY_Curious Crow|r
+    >>Stop at the |cRXP_FRIENDLY_Curious Crow|r on your way west. Keep Heading Up the Mountain for later.
     .turnin 96930 >>Turn in The Capricious Corvid
     .accept 96931 >>Accept Heading Up the Mountain
     .target Curious Crow
 step
-    .goto Mount Hyjal,41.3,45.3
-    >>Head north to the bridge overlooking the Cradle of Tranquility. Touch the |cRXP_PICK_Crow Effigy|r to call the Wild God |cRXP_FRIENDLY_Jereman|r, then talk to him.
-    .turnin 96931 >>Turn in Heading Up the Mountain
-    .accept 96939 >>Accept The Balance of Life and Death
-    .accept 96978 >>Accept Violent Venison
-    .accept 96964 >>Accept A Clever Creature
-    .target Jereman
+    .goto Mount Hyjal,25.3,75.9
+    >>Head west and find |cRXP_FRIENDLY_Fenwick Togglespring|r stuck up in a tree east of Barkskin Burrow
+    .accept 92702 >>Accept Branch Out
+    .target Fenwick Togglespring
 step
-    .goto Mount Hyjal,28.7,43.0
-    >>Talk to the Wild God |cRXP_FRIENDLY_Kala'th|r
-    .turnin 96978 >>Turn in Violent Venison
-    .accept 93617 >>Accept Prey and Predator
-    .target Kala'th
+    >>Find a |cRXP_LOOT_Sturdy Tree Branch|r nearby
+    .complete 92702,1
 step
-    .goto Mount Hyjal,30.0,44.5
-    >>Dissuade the |cRXP_ENEMY_Predatory Hyjal Stags|r
-    .complete 93617,1
-    .mob Predatory Hyjal Stag
+    .goto Mount Hyjal,25.3,75.9
+    >>Talk to |cRXP_FRIENDLY_Fenwick Togglespring|r
+    .turnin 92702 >>Turn in Branch Out
+    .accept 92064 >>Accept Tree Free
+    .target Fenwick Togglespring
 step
-    .goto Mount Hyjal,28.7,43.0
-    >>Talk to |cRXP_FRIENDLY_Kala'th|r
-    .turnin 93617 >>Turn in Prey and Predator
-    .target Kala'th
+    .goto Mount Hyjal,25.3,76.3
+    >>Break the |cRXP_ENEMY_Tree Branch|r to free Fenwick
+    .complete 92064,1
 step
-    .goto Mount Hyjal,27.1,50.0
-    >>Talk to the Wild God |cRXP_FRIENDLY_Marrosis|r
-    .turnin 96939 >>Turn in The Balance of Life and Death
-    .accept 92317 >>Accept Stolen Life
-    .accept 96957 >>Accept Bone Sweet Bone
-    .target Marrosis
+    .goto Mount Hyjal,25.3,75.9
+    >>Talk to |cRXP_FRIENDLY_Fenwick Togglespring|r
+    .turnin 92064 >>Turn in Tree Free
+    .accept 96559 >>Accept Supply Drop
+    .target Fenwick Togglespring
 step
-    .goto Mount Hyjal,31.3,50.3
-    >>Talk to the Wild Demigod |cRXP_FRIENDLY_Shalla'kal|r
-    .accept 93615 >>Accept Kits and Cats
-    .target Shalla'kal
+    .goto Mount Hyjal,25.5,74.6
+    >>Find Fenwick's |cRXP_PICK_Personal Survival Pack|r
+    .turnin 96559 >>Turn in Supply Drop
+    .accept 93383 >>Accept Contents Under Pressure
 step
-    #sticky
-    #label Kittens
-    >>Find Shalla'kal's kittens as you quest: |cRXP_FRIENDLY_Whisperfur|r (27.0, 61.9), |cRXP_FRIENDLY_Solstice|r (38.6, 47.3) and |cRXP_FRIENDLY_Brie|r (41.8, 36.2)
-    .complete 93615,1
+    .goto Mount Hyjal,25.5,74.6
+    >>Wait until it's safe, then open the |cRXP_PICK_Personal Survival Pack|r
+    .complete 93383,1
+    .turnin 93383 >>Turn in Contents Under Pressure
 step
-    .goto Mount Hyjal,32.9,54.4
-    >>Talk to |cRXP_FRIENDLY_Galvinquam Leafsyre|r
-    .accept 96979 >>Accept Sacred Refreshment
-    .target Galvinquam Leafsyre
+    .goto Mount Hyjal,20.6,71.7
+    >>Head south toward Barkskin Burrow and talk to |cRXP_FRIENDLY_Brerufa|r
+    .accept 93952 >>Accept Balance Through Strength
+    .target Brerufa
 step
-    >>Fill Galvinquam's drinking gourd at the waterfall just ahead
-    .complete 96979,1
+    .goto Mount Hyjal,21.5,64.9
+    >>Kill |cRXP_ENEMY_Deadwood Den Guardians|r
+    .complete 93952,1
+    .mob Deadwood Den Guardian
 step
-    .goto Mount Hyjal,32.9,54.4
-    >>Talk to |cRXP_FRIENDLY_Galvinquam Leafsyre|r
-    .turnin 96979 >>Turn in Sacred Refreshment
-    .accept 96991 >>Accept Trail Assist
-    .target Galvinquam Leafsyre
+    .goto Mount Hyjal,20.6,71.7
+    >>Talk to |cRXP_FRIENDLY_Brerufa|r
+    .turnin 93952 >>Turn in Balance Through Strength
+    .accept 92111 >>Accept Of Friend and Fur
+    .target Brerufa
 step
-    .goto Mount Hyjal,24.0,54.8
-    >>Collect |cRXP_LOOT_Sun-Bleached Bones|r around Mourning's Rest
-    >>In the Scourge ruins just southwest, kill |cRXP_ENEMY_Forgotten Soldiers|r, |cRXP_ENEMY_Fleshflay Raveners|r or |cRXP_ENEMY_Death Wailers|r until one drops a |cRXP_LOOT_Drop of Stolen Life|r
-    .complete 96957,1
-    .complete 92317,1
-    .mob Forgotten Soldier
-    .mob Fleshflay Ravener
-    .mob Death Wailer
+    .goto Mount Hyjal,21.08,80.19
+    >>Enter Barkskin Burrow and talk to |cRXP_FRIENDLY_Osi Mistpaw|r
+    .turnin 92111 >>Turn in Of Friend and Fur
+    .accept 93831 >>Accept Sweetpaw Jam
+    .target Osi Mistpaw
 step
-    .goto Mount Hyjal,27.1,50.0
-    >>Talk to |cRXP_FRIENDLY_Marrosis|r
-    .turnin 96957 >>Turn in Bone Sweet Bone
-    .target Marrosis
+    >>Gather |cRXP_LOOT_Bear Berries|r around the burrow
+    .complete 93831,1
+step
+    .goto Mount Hyjal,21.08,80.19
+    >>Talk to |cRXP_FRIENDLY_Osi Mistpaw|r
+    .turnin 93831 >>Turn in Sweetpaw Jam
+    .accept 91697 >>Accept Meet the Elders
+    .target Osi Mistpaw
+step
+    .goto Mount Hyjal,21.8,79.0
+    >>Talk to |cRXP_FRIENDLY_Elder Mistpaw|r and |cRXP_FRIENDLY_Elder Pinespeaker|r
+    .turnin 91697 >>Turn in Meet the Elders
+    .accept 93826 >>Accept Deal Dread to Deadwood
+    .accept 94504 >>Accept Barkskin Beginnings
+    .accept 93833 >>Accept Wicked Wisdom
+    .target Elder Mistpaw
+    .target Elder Pinespeaker
+step
+    .goto Mount Hyjal,20.82,79.81
+    >>Talk to |cRXP_FRIENDLY_Suma Mossmane|r
+    .accept 93825 >>Accept Barkbound Blessings
+    .target Suma Mossmane
+step
+    .goto Mount Hyjal,20.16,77.99
+    >>Talk to |cRXP_FRIENDLY_Fennar Mossmane|r
+    .accept 93828 >>Accept Herbs of the Hollow
+    .accept 93830 >>Accept Water of Hyjal
+    .target Fennar Mossmane
+step
+    .goto Mount Hyjal,21.0,78.6
+    >>Talk to |cRXP_FRIENDLY_Dala Fairmaw|r
+    .accept 93834 >>Accept Burrow Beetles
+    .target Dala Fairmaw
+step
+    >>Around Barkskin Burrow, gather |cRXP_LOOT_Moonveil Moss|r, |cRXP_LOOT_Dried Hanging Herbs|r and |cRXP_LOOT_Burrow Beetle Bits|r
+    .complete 93825,1
+    .complete 93828,1
+    .complete 93834,1
+step
+    .goto Mount Hyjal,34.8,73.9
+    >>Kill |cRXP_ENEMY_Hyjal Owls|r for |cRXP_LOOT_Intact Owl Bodies|r
+    .complete 93833,1
+    .mob Hyjal Owl
+step
+    .goto Mount Hyjal,21.4,64.9
+    >>Go to Deadwood Den. Kill |cRXP_ENEMY_Deadwood Totemics|r and |cRXP_ENEMY_Deadwood Fel-Tenders|r. Fill Fennar's waterskin at the pond outside the den.
+    .complete 93826,1
+    .complete 93826,2
+    .complete 93830,1
+    .mob Deadwood Totemic
+    .mob Deadwood Fel-Tender
+step
+    .goto Mount Hyjal,31.5,58.6
+    >>Deeper in the den, talk to the caged |cRXP_FRIENDLY_Barkskin Matriarch|r
+    .accept 91698 >>Accept Barkskin Breakout
+    .target Barkskin Matriarch
+step
+    .goto Mount Hyjal,31.4,57.9
+    >>Kill a |cRXP_ENEMY_Deadwood Warden|r for the |cRXP_LOOT_Deadwood Key|r
+    .complete 91698,1
+    .mob Deadwood Warden
+step
+    .goto Mount Hyjal,31.5,58.6
+    >>Return the key to the |cRXP_FRIENDLY_Barkskin Matriarch|r, then escort her out of the den
+    .turnin 91698 >>Turn in Barkskin Breakout
+    .accept 91696 >>Accept Open Season
+    .complete 91696,1
+    .target Barkskin Matriarch
+step
+    .goto Mount Hyjal,20.6,71.7
+    >>Talk to |cRXP_FRIENDLY_Brerufa|r
+    .turnin 91696 >>Turn in Open Season
+    .target Brerufa
+step
+    .goto Mount Hyjal,21.8,79.0
+    >>Turn in to the elders and the Mossmanes inside Barkskin Burrow
+    .turnin 93826 >>Turn in Deal Dread to Deadwood
+    .turnin 93833 >>Turn in Wicked Wisdom
+    .turnin 93825 >>Turn in Barkbound Blessings
+    .turnin 93828 >>Turn in Herbs of the Hollow
+    .turnin 93830 >>Turn in Water of Hyjal
+    .turnin 93834 >>Turn in Burrow Beetles
+    .target Elder Mistpaw
+    .target Elder Pinespeaker
+    .target Suma Mossmane
+    .target Fennar Mossmane
+    .target Dala Fairmaw
+step
+    #optional
+    .goto Mount Hyjal,21.8,79.0
+    >>If you've reached Neutral with Barkskin Burrow, turn in to |cRXP_FRIENDLY_Elder Mistpaw|r
+    .turnin 94504 >>Turn in Barkskin Beginnings
+    .target Elder Mistpaw
 ]])
 
 -------------------------------------------------------------------------------
--- 3) 58-59 Elderwild & Barkskin Burrow
+-- 3) 58-59 Elderwild & Wild Gods
 -------------------------------------------------------------------------------
 RXPGuides.RegisterGuide(GROUP, [[
 #forever
 #version 1
 << Alliance
-#name 58-59 Elderwild & Barkskin Burrow
+#name 58-59 Elderwild & Wild Gods
 #next 59-60 Shrine, Dae'gun & Summit
 
 step
     .goto Mount Hyjal,15.7,54.7
-    >>Head west to the Alliance outpost in Elderwild and talk to |cRXP_FRIENDLY_Sefira Everbright|r
+    >>Head north to the Alliance outpost in Elderwild and talk to |cRXP_FRIENDLY_Sefira Everbright|r
     .turnin 91881 >>Turn in The Western Post
     .accept 92449 >>Accept Blight No More
     .accept 92591 >>Accept Final Death
@@ -514,161 +595,83 @@ step
     .turnin 94832 >>Turn in Belle's Ring
     .target Daythor Brellan
 step
-    .goto Mount Hyjal,20.6,71.7
-    >>Head south toward Barkskin Burrow and talk to |cRXP_FRIENDLY_Brerufa|r
-    .accept 93952 >>Accept Balance Through Strength
-    .target Brerufa
-step
-    .goto Mount Hyjal,21.5,64.9
-    >>Kill |cRXP_ENEMY_Deadwood Den Guardians|r
-    .complete 93952,1
-    .mob Deadwood Den Guardian
-step
-    .goto Mount Hyjal,20.6,71.7
-    >>Talk to |cRXP_FRIENDLY_Brerufa|r
-    .turnin 93952 >>Turn in Balance Through Strength
-    .accept 92111 >>Accept Of Friend and Fur
-    .target Brerufa
-step
-    .goto Mount Hyjal,21.08,80.19
-    >>Enter Barkskin Burrow and talk to |cRXP_FRIENDLY_Osi Mistpaw|r
-    .turnin 92111 >>Turn in Of Friend and Fur
-    .accept 93831 >>Accept Sweetpaw Jam
-    .target Osi Mistpaw
-step
-    >>Gather |cRXP_LOOT_Bear Berries|r around the burrow
-    .complete 93831,1
-step
-    .goto Mount Hyjal,21.08,80.19
-    >>Talk to |cRXP_FRIENDLY_Osi Mistpaw|r
-    .turnin 93831 >>Turn in Sweetpaw Jam
-    .accept 91697 >>Accept Meet the Elders
-    .target Osi Mistpaw
-step
-    .goto Mount Hyjal,21.8,79.0
-    >>Talk to |cRXP_FRIENDLY_Elder Mistpaw|r and |cRXP_FRIENDLY_Elder Pinespeaker|r
-    .turnin 91697 >>Turn in Meet the Elders
-    .accept 93826 >>Accept Deal Dread to Deadwood
-    .accept 94504 >>Accept Barkskin Beginnings
-    .accept 93833 >>Accept Wicked Wisdom
-    .target Elder Mistpaw
-    .target Elder Pinespeaker
-step
-    .goto Mount Hyjal,20.82,79.81
-    >>Talk to |cRXP_FRIENDLY_Suma Mossmane|r
-    .accept 93825 >>Accept Barkbound Blessings
-    .target Suma Mossmane
-step
-    .goto Mount Hyjal,20.16,77.99
-    >>Talk to |cRXP_FRIENDLY_Fennar Mossmane|r
-    .accept 93828 >>Accept Herbs of the Hollow
-    .accept 93830 >>Accept Water of Hyjal
-    .target Fennar Mossmane
-step
-    .goto Mount Hyjal,21.0,78.6
-    >>Talk to |cRXP_FRIENDLY_Dala Fairmaw|r
-    .accept 93834 >>Accept Burrow Beetles
-    .target Dala Fairmaw
-step
-    >>Around Barkskin Burrow, gather |cRXP_LOOT_Moonveil Moss|r, |cRXP_LOOT_Dried Hanging Herbs|r and |cRXP_LOOT_Burrow Beetle Bits|r
-    .complete 93825,1
-    .complete 93828,1
-    .complete 93834,1
-step
-    .goto Mount Hyjal,25.3,75.9
-    >>Find |cRXP_FRIENDLY_Fenwick Togglespring|r stuck up in a tree east of the burrow
-    .accept 92702 >>Accept Branch Out
-    .target Fenwick Togglespring
-step
-    >>Find a |cRXP_LOOT_Sturdy Tree Branch|r nearby
-    .complete 92702,1
-step
-    .goto Mount Hyjal,25.3,75.9
-    >>Talk to |cRXP_FRIENDLY_Fenwick Togglespring|r
-    .turnin 92702 >>Turn in Branch Out
-    .accept 92064 >>Accept Tree Free
-    .target Fenwick Togglespring
-step
-    .goto Mount Hyjal,25.3,76.3
-    >>Break the |cRXP_ENEMY_Tree Branch|r to free Fenwick
-    .complete 92064,1
-step
-    .goto Mount Hyjal,25.3,75.9
-    >>Talk to |cRXP_FRIENDLY_Fenwick Togglespring|r
-    .turnin 92064 >>Turn in Tree Free
-    .accept 96559 >>Accept Supply Drop
-    .target Fenwick Togglespring
-step
-    .goto Mount Hyjal,25.5,74.6
-    >>Find Fenwick's |cRXP_PICK_Personal Survival Pack|r
-    .turnin 96559 >>Turn in Supply Drop
-    .accept 93383 >>Accept Contents Under Pressure
-step
-    .goto Mount Hyjal,25.5,74.6
-    >>Wait until it's safe, then open the |cRXP_PICK_Personal Survival Pack|r
-    .complete 93383,1
-    .turnin 93383 >>Turn in Contents Under Pressure
-step
-    .goto Mount Hyjal,34.8,73.9
-    >>Kill |cRXP_ENEMY_Hyjal Owls|r for |cRXP_LOOT_Intact Owl Bodies|r and loot |cRXP_LOOT_Hyjal Owl Feathers|r from them and their nests
-    .complete 93833,1
+    >>Head south into the valley below Elderwild and collect |cRXP_LOOT_Hyjal Owl Feathers|r from owls and their nests
     .complete 95027,1
     .mob Hyjal Owl
 step
-    .goto Mount Hyjal,21.4,64.9
-    >>Go to Deadwood Den. Kill |cRXP_ENEMY_Deadwood Totemics|r and |cRXP_ENEMY_Deadwood Fel-Tenders|r. Fill Fennar's waterskin at the pond outside the den.
-    .complete 93826,1
-    .complete 93826,2
-    .complete 93830,1
-    .mob Deadwood Totemic
-    .mob Deadwood Fel-Tender
-step
-    .goto Mount Hyjal,31.5,58.6
-    >>Deeper in the den, talk to the caged |cRXP_FRIENDLY_Barkskin Matriarch|r
-    .accept 91698 >>Accept Barkskin Breakout
-    .target Barkskin Matriarch
-step
-    .goto Mount Hyjal,31.4,57.9
-    >>Kill a |cRXP_ENEMY_Deadwood Warden|r for the |cRXP_LOOT_Deadwood Key|r
-    .complete 91698,1
-    .mob Deadwood Warden
-step
-    .goto Mount Hyjal,31.5,58.6
-    >>Return the key to the |cRXP_FRIENDLY_Barkskin Matriarch|r, then escort her out of the den
-    .turnin 91698 >>Turn in Barkskin Breakout
-    .accept 91696 >>Accept Open Season
-    .complete 91696,1
-    .target Barkskin Matriarch
-step
-    .goto Mount Hyjal,20.6,71.7
-    >>Talk to |cRXP_FRIENDLY_Brerufa|r
-    .turnin 91696 >>Turn in Open Season
-    .target Brerufa
-step
-    .goto Mount Hyjal,21.8,79.0
-    >>Turn in to the elders and the Mossmanes inside Barkskin Burrow
-    .turnin 93826 >>Turn in Deal Dread to Deadwood
-    .turnin 93833 >>Turn in Wicked Wisdom
-    .turnin 93825 >>Turn in Barkbound Blessings
-    .turnin 93828 >>Turn in Herbs of the Hollow
-    .turnin 93830 >>Turn in Water of Hyjal
-    .turnin 93834 >>Turn in Burrow Beetles
-    .target Elder Mistpaw
-    .target Elder Pinespeaker
-    .target Suma Mossmane
-    .target Fennar Mossmane
-    .target Dala Fairmaw
-step
-    #optional
-    .goto Mount Hyjal,21.8,79.0
-    >>If you've reached Neutral with Barkskin Burrow, turn in to |cRXP_FRIENDLY_Elder Mistpaw|r
-    .turnin 94504 >>Turn in Barkskin Beginnings
-    .target Elder Mistpaw
-step
     .goto Mount Hyjal,15.6,50.0
-    >>Head back north to Elderwild and talk to |cRXP_FRIENDLY_Hnaz Blunderflame|r
+    >>Back in Elderwild, talk to |cRXP_FRIENDLY_Hnaz Blunderflame|r
     .turnin 95027 >>Turn in Feathers in Flight
     .target Hnaz Blunderflame
+step
+    .goto Mount Hyjal,41.3,45.3
+    >>Head east to the bridge overlooking the Cradle of Tranquility. Touch the |cRXP_PICK_Crow Effigy|r to call the Wild God |cRXP_FRIENDLY_Jereman|r, then talk to him.
+    .turnin 96931 >>Turn in Heading Up the Mountain
+    .accept 96939 >>Accept The Balance of Life and Death
+    .accept 96978 >>Accept Violent Venison
+    .accept 96964 >>Accept A Clever Creature
+    .target Jereman
+step
+    .goto Mount Hyjal,28.7,43.0
+    >>Talk to the Wild God |cRXP_FRIENDLY_Kala'th|r
+    .turnin 96978 >>Turn in Violent Venison
+    .accept 93617 >>Accept Prey and Predator
+    .target Kala'th
+step
+    .goto Mount Hyjal,30.0,44.5
+    >>Dissuade the |cRXP_ENEMY_Predatory Hyjal Stags|r
+    .complete 93617,1
+    .mob Predatory Hyjal Stag
+step
+    .goto Mount Hyjal,28.7,43.0
+    >>Talk to |cRXP_FRIENDLY_Kala'th|r
+    .turnin 93617 >>Turn in Prey and Predator
+    .target Kala'th
+step
+    .goto Mount Hyjal,27.1,50.0
+    >>Talk to the Wild God |cRXP_FRIENDLY_Marrosis|r
+    .turnin 96939 >>Turn in The Balance of Life and Death
+    .accept 92317 >>Accept Stolen Life
+    .accept 96957 >>Accept Bone Sweet Bone
+    .target Marrosis
+step
+    .goto Mount Hyjal,31.3,50.3
+    >>Talk to the Wild Demigod |cRXP_FRIENDLY_Shalla'kal|r
+    .accept 93615 >>Accept Kits and Cats
+    .target Shalla'kal
+step
+    #sticky
+    #label Kittens
+    >>Find Shalla'kal's kittens as you quest: |cRXP_FRIENDLY_Whisperfur|r (27.0, 61.9), |cRXP_FRIENDLY_Solstice|r (38.6, 47.3) and |cRXP_FRIENDLY_Brie|r (41.8, 36.2)
+    .complete 93615,1
+step
+    .goto Mount Hyjal,32.9,54.4
+    >>Talk to |cRXP_FRIENDLY_Galvinquam Leafsyre|r
+    .accept 96979 >>Accept Sacred Refreshment
+    .target Galvinquam Leafsyre
+step
+    >>Fill Galvinquam's drinking gourd at the waterfall just ahead
+    .complete 96979,1
+step
+    .goto Mount Hyjal,32.9,54.4
+    >>Talk to |cRXP_FRIENDLY_Galvinquam Leafsyre|r
+    .turnin 96979 >>Turn in Sacred Refreshment
+    .accept 96991 >>Accept Trail Assist
+    .target Galvinquam Leafsyre
+step
+    .goto Mount Hyjal,24.0,54.8
+    >>Collect |cRXP_LOOT_Sun-Bleached Bones|r around Mourning's Rest
+    >>In the Scourge ruins just southwest, kill |cRXP_ENEMY_Forgotten Soldiers|r, |cRXP_ENEMY_Fleshflay Raveners|r or |cRXP_ENEMY_Death Wailers|r until one drops a |cRXP_LOOT_Drop of Stolen Life|r
+    .complete 96957,1
+    .complete 92317,1
+    .mob Forgotten Soldier
+    .mob Fleshflay Ravener
+    .mob Death Wailer
+step
+    .goto Mount Hyjal,27.1,50.0
+    >>Talk to |cRXP_FRIENDLY_Marrosis|r
+    .turnin 96957 >>Turn in Bone Sweet Bone
+    .target Marrosis
 ]])
 
 -------------------------------------------------------------------------------

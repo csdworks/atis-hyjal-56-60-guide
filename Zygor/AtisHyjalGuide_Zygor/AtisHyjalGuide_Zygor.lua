@@ -8,7 +8,7 @@ if UnitFactionGroup("player") ~= "Alliance" then return end
 ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Ati's Hyjal 56-60 Guide\\Tainted Foothills (56-57)",{
 author="Ati",
 description="Ati's Alliance route through Mount Hyjal: Tainted Foothills.",
-next="Leveling Guides\\Ati's Hyjal 56-60 Guide\\Moonglade & Wild Gods (57-58)",
+next="Leveling Guides\\Ati's Hyjal 56-60 Guide\\Moonglade & Barkskin Burrow (57-58)",
 },[[
 step
 Travel to Mount Hyjal |complete zone("Mount Hyjal")
@@ -188,10 +188,10 @@ turnin The Experimental Method##95316 |goto Mount Hyjal 48.26,85.72
 accept The Western Post##91881 |goto Mount Hyjal 48.26,85.72
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Ati's Hyjal 56-60 Guide\\Moonglade & Wild Gods (57-58)",{
+ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Ati's Hyjal 56-60 Guide\\Moonglade & Barkskin Burrow (57-58)",{
 author="Ati",
-description="Ati's Alliance route through Mount Hyjal: Moonglade & Wild Gods.",
-next="Leveling Guides\\Ati's Hyjal 56-60 Guide\\Elderwild & Barkskin Burrow (58-59)",
+description="Ati's Alliance route through Mount Hyjal: Moonglade & Barkskin Burrow.",
+next="Leveling Guides\\Ati's Hyjal 56-60 Guide\\Elderwild & Wild Gods (58-59)",
 },[[
 step
 talk Ketharas##256222
@@ -224,62 +224,132 @@ accept Taking to New Heights##92171 |goto Mount Hyjal 73.34,81.88
 step
 talk Curious Crow##257753
 turnin The Capricious Corvid##96930 |goto Mount Hyjal 48.26,85.72
+|tip Stop at the Curious Crow on your way west. Keep Heading Up the Mountain for later.
 accept Heading Up the Mountain##96931 |goto Mount Hyjal 48.26,85.72
 step
-talk Jereman##267158
-turnin Heading Up the Mountain##96931 |goto Mount Hyjal 41.27,45.33
-|tip Head north to the bridge overlooking the Cradle of Tranquility. Touch the Crow Effigy to call the Wild God Jereman, then talk to him.
-accept The Balance of Life and Death##96939 |goto Mount Hyjal 41.27,45.33
-accept Violent Venison##96978 |goto Mount Hyjal 41.27,45.33
-accept A Clever Creature##96964 |goto Mount Hyjal 41.27,45.33
+talk Fenwick Togglespring##249549
+accept Branch Out##92702 |goto Mount Hyjal 25.31,75.87
+|tip Head west and find Fenwick Togglespring stuck up in a tree east of Barkskin Burrow
 step
-talk Kala'th##255693
-turnin Violent Venison##96978 |goto Mount Hyjal 28.68,43.04
-accept Prey and Predator##93617 |goto Mount Hyjal 28.68,43.04
+collect Sturdy Tree Branch##274617 |q 92702/1
+|tip Find a Sturdy Tree Branch nearby
 step
-kill Predatory Hyjal Stag##256809 |q 93617/1 |goto Mount Hyjal 30.00,44.50
-|tip Dissuade the Predatory Hyjal Stags
+talk Fenwick Togglespring##249549
+turnin Branch Out##92702 |goto Mount Hyjal 25.31,75.87
+accept Tree Free##92064 |goto Mount Hyjal 25.31,75.87
 step
-talk Kala'th##255693
-turnin Prey and Predator##93617 |goto Mount Hyjal 28.68,43.04
+kill Tree Branch##254501 |q 92064/1 |goto Mount Hyjal 25.30,76.30
+|tip Break the Tree Branch to free Fenwick
 step
-talk Marrosis##267113
-turnin The Balance of Life and Death##96939 |goto Mount Hyjal 27.10,49.99
-accept Stolen Life##92317 |goto Mount Hyjal 27.10,49.99
-accept Bone Sweet Bone##96957 |goto Mount Hyjal 27.10,49.99
+talk Fenwick Togglespring##249549
+turnin Tree Free##92064 |goto Mount Hyjal 25.31,75.87
+accept Supply Drop##96559 |goto Mount Hyjal 25.31,75.87
 step
-talk Shalla'kal##255683
-accept Kits and Cats##93615 |goto Mount Hyjal 31.30,50.30
+talk Personal Survival Pack##254644
+turnin Supply Drop##96559 |goto Mount Hyjal 25.46,74.62
+|tip Find Fenwick's Personal Survival Pack
+accept Contents Under Pressure##93383 |goto Mount Hyjal 25.46,74.62
 step
-talk Galvinquam Leafsyre##267109
-accept Sacred Refreshment##96979 |goto Mount Hyjal 32.89,54.44
-|tip Find Shalla'kal's kittens as you quest: Whisperfur (27.0, 61.9), Solstice (38.6, 47.3) and Brie (41.8, 36.2)
+Wait until you can safely open the Personal Survival Pack. |q 93383/1 |goto Mount Hyjal 25.50,74.60
+|tip Wait until it's safe, then open the Personal Survival Pack
+talk Personal Survival Pack##254644
+turnin Contents Under Pressure##93383 |goto Mount Hyjal 25.46,74.62
 step
-Fill Galvinquam Leafsyre's drinking gourd at the waterfall ahead. |q 96979/1
-|tip Fill Galvinquam's drinking gourd at the waterfall just ahead
+talk Brerufa##256978
+accept Balance Through Strength##93952 |goto Mount Hyjal 20.56,71.73
+|tip Head south toward Barkskin Burrow and talk to Brerufa
 step
-talk Galvinquam Leafsyre##267109
-turnin Sacred Refreshment##96979 |goto Mount Hyjal 32.89,54.44
-accept Trail Assist##96991 |goto Mount Hyjal 32.89,54.44
+kill Deadwood Den Guardian##252063 |q 93952/1 |goto Mount Hyjal 21.50,64.90
+|tip Kill Deadwood Den Guardians
 step
-collect Sun-Bleached Bone##275927 |q 96957/1 |goto Mount Hyjal 24.00,54.80
-|tip Collect Sun-Bleached Bones around Mourning's Rest
-|tip In the Scourge ruins just southwest, kill Forgotten Soldiers, Fleshflay Raveners or Death Wailers until one drops a Drop of Stolen Life
-collect Drop of Stolen Life##272973 |q 92317/1 |goto Mount Hyjal 24.00,54.80
+talk Brerufa##256978
+turnin Balance Through Strength##93952 |goto Mount Hyjal 20.56,71.73
+accept Of Friend and Fur##92111 |goto Mount Hyjal 20.56,71.73
 step
-talk Marrosis##267113
-turnin Bone Sweet Bone##96957 |goto Mount Hyjal 27.10,49.99
+talk Osi Mistpaw##256646
+turnin Of Friend and Fur##92111 |goto Mount Hyjal 21.08,80.19
+|tip Enter Barkskin Burrow and talk to Osi Mistpaw
+accept Sweetpaw Jam##93831 |goto Mount Hyjal 21.08,80.19
+step
+collect Bear Berries##262818 |q 93831/1
+|tip Gather Bear Berries around the burrow
+step
+talk Osi Mistpaw##256646
+turnin Sweetpaw Jam##93831 |goto Mount Hyjal 21.08,80.19
+accept Meet the Elders##91697 |goto Mount Hyjal 21.08,80.19
+step
+talk Elder Mistpaw##256627
+turnin Meet the Elders##91697 |goto Mount Hyjal 21.77,78.98
+accept Deal Dread to Deadwood##93826 |goto Mount Hyjal 21.77,78.98
+accept Barkskin Beginnings##94504 |goto Mount Hyjal 21.77,78.98
+talk Elder Pinespeaker##256650
+accept Wicked Wisdom##93833 |goto Mount Hyjal 21.77,79.37
+step
+talk Suma Mossmane##260661
+accept Barkbound Blessings##93825 |goto Mount Hyjal 20.82,79.81
+step
+talk Fennar Mossmane##256626
+accept Herbs of the Hollow##93828 |goto Mount Hyjal 20.16,77.99
+accept Water of Hyjal##93830 |goto Mount Hyjal 20.16,77.99
+step
+talk Dala Fairmaw##256629
+accept Burrow Beetles##93834 |goto Mount Hyjal 21.04,78.63
+step
+collect Moonveil Moss##262802 |q 93825/1
+|tip Around Barkskin Burrow, gather Moonveil Moss, Dried Hanging Herbs and Burrow Beetle Bits
+Collect 10 Dried Hanging Herbs from around Barkskin Burrow and return them to Fennar Mossmane. |q 93828/1
+Gather 6 Burrow Beetle Bits for Dala Fairmaw. |q 93834/1
+step
+collect Intact Owl Body##262816 |q 93833/1 |goto Mount Hyjal 34.80,73.90
+|tip Kill Hyjal Owls for Intact Owl Bodies
+step
+kill Deadwood Totemic##252116 |q 93826/1 |goto Mount Hyjal 21.40,64.90
+|tip Go to Deadwood Den. Kill Deadwood Totemics and Deadwood Fel-Tenders. Fill Fennar's waterskin at the pond outside the den.
+kill Deadwood Fel-Tender##252096 |q 93826/2 |goto Mount Hyjal 21.40,64.90
+Fill a waterskin provided by Fennar Mossmane at the pond outside of the Deadwood Furbolg den. |q 93830/1 |goto Mount Hyjal 21.40,64.90
+step
+talk Barkskin Matriarch##244425
+accept Barkskin Breakout##91698 |goto Mount Hyjal 31.50,58.62
+|tip Deeper in the den, talk to the caged Barkskin Matriarch
+step
+collect Deadwood Key##272936 |q 91698/1 |goto Mount Hyjal 31.40,57.90
+|tip Kill a Deadwood Warden for the Deadwood Key
+step
+talk Barkskin Matriarch##244425
+turnin Barkskin Breakout##91698 |goto Mount Hyjal 31.50,58.62
+|tip Return the key to the Barkskin Matriarch, then escort her out of the den
+accept Open Season##91696 |goto Mount Hyjal 31.50,58.62
+Escort the Barkskin Matriarch out of Deadwood Den and return to Barkskin Burrow. |q 91696/1 |goto Mount Hyjal 31.50,58.60
+step
+talk Brerufa##256978
+turnin Open Season##91696 |goto Mount Hyjal 20.56,71.73
+step
+talk Elder Pinespeaker##256650
+turnin Deal Dread to Deadwood##93826 |goto Mount Hyjal 21.77,79.37
+|tip Turn in to the elders and the Mossmanes inside Barkskin Burrow
+turnin Wicked Wisdom##93833 |goto Mount Hyjal 21.77,79.37
+talk Suma Mossmane##260661
+turnin Barkbound Blessings##93825 |goto Mount Hyjal 20.82,79.81
+talk Fennar Mossmane##256626
+turnin Herbs of the Hollow##93828 |goto Mount Hyjal 20.16,77.99
+turnin Water of Hyjal##93830 |goto Mount Hyjal 20.16,77.99
+talk Dala Fairmaw##256629
+turnin Burrow Beetles##93834 |goto Mount Hyjal 21.04,78.63
+step
+talk Elder Mistpaw##256627
+turnin Barkskin Beginnings##94504 |goto Mount Hyjal 21.77,78.98 |only if readyq(94504)
+|tip If you've reached Neutral with Barkskin Burrow, turn in to Elder Mistpaw
 ]])
 
-ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Ati's Hyjal 56-60 Guide\\Elderwild & Barkskin Burrow (58-59)",{
+ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Ati's Hyjal 56-60 Guide\\Elderwild & Wild Gods (58-59)",{
 author="Ati",
-description="Ati's Alliance route through Mount Hyjal: Elderwild & Barkskin Burrow.",
+description="Ati's Alliance route through Mount Hyjal: Elderwild & Wild Gods.",
 next="Leveling Guides\\Ati's Hyjal 56-60 Guide\\Shrine, Dae'gun & Summit (59-60)",
 },[[
 step
 talk Sefira Everbright##244517
 turnin The Western Post##91881 |goto Mount Hyjal 15.67,54.66
-|tip Head west to the Alliance outpost in Elderwild and talk to Sefira Everbright
+|tip Head north to the Alliance outpost in Elderwild and talk to Sefira Everbright
 accept Blight No More##92449 |goto Mount Hyjal 15.67,54.66
 accept Final Death##92591 |goto Mount Hyjal 15.67,54.66
 step
@@ -349,123 +419,56 @@ talk Daythor Brellan##264521
 turnin Belle's Ring##94832 |goto Mount Hyjal 15.55,52.07
 |tip Show the ring to Daythor Brellan
 step
-talk Brerufa##256978
-accept Balance Through Strength##93952 |goto Mount Hyjal 20.56,71.73
-|tip Head south toward Barkskin Burrow and talk to Brerufa
-step
-kill Deadwood Den Guardian##252063 |q 93952/1 |goto Mount Hyjal 21.50,64.90
-|tip Kill Deadwood Den Guardians
-step
-talk Brerufa##256978
-turnin Balance Through Strength##93952 |goto Mount Hyjal 20.56,71.73
-accept Of Friend and Fur##92111 |goto Mount Hyjal 20.56,71.73
-step
-talk Osi Mistpaw##256646
-turnin Of Friend and Fur##92111 |goto Mount Hyjal 21.08,80.19
-|tip Enter Barkskin Burrow and talk to Osi Mistpaw
-accept Sweetpaw Jam##93831 |goto Mount Hyjal 21.08,80.19
-step
-collect Bear Berries##262818 |q 93831/1
-|tip Gather Bear Berries around the burrow
-step
-talk Osi Mistpaw##256646
-turnin Sweetpaw Jam##93831 |goto Mount Hyjal 21.08,80.19
-accept Meet the Elders##91697 |goto Mount Hyjal 21.08,80.19
-step
-talk Elder Mistpaw##256627
-turnin Meet the Elders##91697 |goto Mount Hyjal 21.77,78.98
-accept Deal Dread to Deadwood##93826 |goto Mount Hyjal 21.77,78.98
-accept Barkskin Beginnings##94504 |goto Mount Hyjal 21.77,78.98
-talk Elder Pinespeaker##256650
-accept Wicked Wisdom##93833 |goto Mount Hyjal 21.77,79.37
-step
-talk Suma Mossmane##260661
-accept Barkbound Blessings##93825 |goto Mount Hyjal 20.82,79.81
-step
-talk Fennar Mossmane##256626
-accept Herbs of the Hollow##93828 |goto Mount Hyjal 20.16,77.99
-accept Water of Hyjal##93830 |goto Mount Hyjal 20.16,77.99
-step
-talk Dala Fairmaw##256629
-accept Burrow Beetles##93834 |goto Mount Hyjal 21.04,78.63
-step
-collect Moonveil Moss##262802 |q 93825/1
-|tip Around Barkskin Burrow, gather Moonveil Moss, Dried Hanging Herbs and Burrow Beetle Bits
-Collect 10 Dried Hanging Herbs from around Barkskin Burrow and return them to Fennar Mossmane. |q 93828/1
-Gather 6 Burrow Beetle Bits for Dala Fairmaw. |q 93834/1
-step
-talk Fenwick Togglespring##249549
-accept Branch Out##92702 |goto Mount Hyjal 25.31,75.87
-|tip Find Fenwick Togglespring stuck up in a tree east of the burrow
-step
-collect Sturdy Tree Branch##274617 |q 92702/1
-|tip Find a Sturdy Tree Branch nearby
-step
-talk Fenwick Togglespring##249549
-turnin Branch Out##92702 |goto Mount Hyjal 25.31,75.87
-accept Tree Free##92064 |goto Mount Hyjal 25.31,75.87
-step
-kill Tree Branch##254501 |q 92064/1 |goto Mount Hyjal 25.30,76.30
-|tip Break the Tree Branch to free Fenwick
-step
-talk Fenwick Togglespring##249549
-turnin Tree Free##92064 |goto Mount Hyjal 25.31,75.87
-accept Supply Drop##96559 |goto Mount Hyjal 25.31,75.87
-step
-talk Personal Survival Pack##254644
-turnin Supply Drop##96559 |goto Mount Hyjal 25.46,74.62
-|tip Find Fenwick's Personal Survival Pack
-accept Contents Under Pressure##93383 |goto Mount Hyjal 25.46,74.62
-step
-Wait until you can safely open the Personal Survival Pack. |q 93383/1 |goto Mount Hyjal 25.50,74.60
-|tip Wait until it's safe, then open the Personal Survival Pack
-talk Personal Survival Pack##254644
-turnin Contents Under Pressure##93383 |goto Mount Hyjal 25.46,74.62
-step
-collect Intact Owl Body##262816 |q 93833/1 |goto Mount Hyjal 34.80,73.90
-|tip Kill Hyjal Owls for Intact Owl Bodies and loot Hyjal Owl Feathers from them and their nests
-collect Hyjal Owl Feather##253341 |q 95027/1 |goto Mount Hyjal 34.80,73.90
-step
-kill Deadwood Totemic##252116 |q 93826/1 |goto Mount Hyjal 21.40,64.90
-|tip Go to Deadwood Den. Kill Deadwood Totemics and Deadwood Fel-Tenders. Fill Fennar's waterskin at the pond outside the den.
-kill Deadwood Fel-Tender##252096 |q 93826/2 |goto Mount Hyjal 21.40,64.90
-Fill a waterskin provided by Fennar Mossmane at the pond outside of the Deadwood Furbolg den. |q 93830/1 |goto Mount Hyjal 21.40,64.90
-step
-talk Barkskin Matriarch##244425
-accept Barkskin Breakout##91698 |goto Mount Hyjal 31.50,58.62
-|tip Deeper in the den, talk to the caged Barkskin Matriarch
-step
-collect Deadwood Key##272936 |q 91698/1 |goto Mount Hyjal 31.40,57.90
-|tip Kill a Deadwood Warden for the Deadwood Key
-step
-talk Barkskin Matriarch##244425
-turnin Barkskin Breakout##91698 |goto Mount Hyjal 31.50,58.62
-|tip Return the key to the Barkskin Matriarch, then escort her out of the den
-accept Open Season##91696 |goto Mount Hyjal 31.50,58.62
-Escort the Barkskin Matriarch out of Deadwood Den and return to Barkskin Burrow. |q 91696/1 |goto Mount Hyjal 31.50,58.60
-step
-talk Brerufa##256978
-turnin Open Season##91696 |goto Mount Hyjal 20.56,71.73
-step
-talk Elder Pinespeaker##256650
-turnin Deal Dread to Deadwood##93826 |goto Mount Hyjal 21.77,79.37
-|tip Turn in to the elders and the Mossmanes inside Barkskin Burrow
-turnin Wicked Wisdom##93833 |goto Mount Hyjal 21.77,79.37
-talk Suma Mossmane##260661
-turnin Barkbound Blessings##93825 |goto Mount Hyjal 20.82,79.81
-talk Fennar Mossmane##256626
-turnin Herbs of the Hollow##93828 |goto Mount Hyjal 20.16,77.99
-turnin Water of Hyjal##93830 |goto Mount Hyjal 20.16,77.99
-talk Dala Fairmaw##256629
-turnin Burrow Beetles##93834 |goto Mount Hyjal 21.04,78.63
-step
-talk Elder Mistpaw##256627
-turnin Barkskin Beginnings##94504 |goto Mount Hyjal 21.77,78.98 |only if readyq(94504)
-|tip If you've reached Neutral with Barkskin Burrow, turn in to Elder Mistpaw
+collect Hyjal Owl Feather##253341 |q 95027/1
+|tip Head south into the valley below Elderwild and collect Hyjal Owl Feathers from owls and their nests
 step
 talk Hnaz Blunderflame##249968
 turnin Feathers in Flight##95027 |goto Mount Hyjal 15.64,49.99
-|tip Head back north to Elderwild and talk to Hnaz Blunderflame
+|tip Back in Elderwild, talk to Hnaz Blunderflame
+step
+talk Jereman##267158
+turnin Heading Up the Mountain##96931 |goto Mount Hyjal 41.27,45.33
+|tip Head east to the bridge overlooking the Cradle of Tranquility. Touch the Crow Effigy to call the Wild God Jereman, then talk to him.
+accept The Balance of Life and Death##96939 |goto Mount Hyjal 41.27,45.33
+accept Violent Venison##96978 |goto Mount Hyjal 41.27,45.33
+accept A Clever Creature##96964 |goto Mount Hyjal 41.27,45.33
+step
+talk Kala'th##255693
+turnin Violent Venison##96978 |goto Mount Hyjal 28.68,43.04
+accept Prey and Predator##93617 |goto Mount Hyjal 28.68,43.04
+step
+kill Predatory Hyjal Stag##256809 |q 93617/1 |goto Mount Hyjal 30.00,44.50
+|tip Dissuade the Predatory Hyjal Stags
+step
+talk Kala'th##255693
+turnin Prey and Predator##93617 |goto Mount Hyjal 28.68,43.04
+step
+talk Marrosis##267113
+turnin The Balance of Life and Death##96939 |goto Mount Hyjal 27.10,49.99
+accept Stolen Life##92317 |goto Mount Hyjal 27.10,49.99
+accept Bone Sweet Bone##96957 |goto Mount Hyjal 27.10,49.99
+step
+talk Shalla'kal##255683
+accept Kits and Cats##93615 |goto Mount Hyjal 31.30,50.30
+step
+talk Galvinquam Leafsyre##267109
+accept Sacred Refreshment##96979 |goto Mount Hyjal 32.89,54.44
+|tip Find Shalla'kal's kittens as you quest: Whisperfur (27.0, 61.9), Solstice (38.6, 47.3) and Brie (41.8, 36.2)
+step
+Fill Galvinquam Leafsyre's drinking gourd at the waterfall ahead. |q 96979/1
+|tip Fill Galvinquam's drinking gourd at the waterfall just ahead
+step
+talk Galvinquam Leafsyre##267109
+turnin Sacred Refreshment##96979 |goto Mount Hyjal 32.89,54.44
+accept Trail Assist##96991 |goto Mount Hyjal 32.89,54.44
+step
+collect Sun-Bleached Bone##275927 |q 96957/1 |goto Mount Hyjal 24.00,54.80
+|tip Collect Sun-Bleached Bones around Mourning's Rest
+|tip In the Scourge ruins just southwest, kill Forgotten Soldiers, Fleshflay Raveners or Death Wailers until one drops a Drop of Stolen Life
+collect Drop of Stolen Life##272973 |q 92317/1 |goto Mount Hyjal 24.00,54.80
+step
+talk Marrosis##267113
+turnin Bone Sweet Bone##96957 |goto Mount Hyjal 27.10,49.99
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Ati's Hyjal 56-60 Guide\\Shrine, Dae'gun & Summit (59-60)",{

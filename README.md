@@ -27,8 +27,8 @@ An Alliance leveling route through WoW Forever's **Mount Hyjal**. It comes in tw
 | Part | Area | Main quest givers |
 |---|---|---|
 | 56–57 Tainted Foothills | South of the zone | Ketharas, Fraxinus & Hyacinth, the Curious Crow, Felflick |
-| 57–58 Moonglade & Wild Gods | Nighthaven, then the Cradle of Tranquility | Dendrite Starblaze, Orokai, Jereman, Kala'th, Marrosis |
-| 58–59 Elderwild & Barkskin Burrow | West of the zone | Sefira Everbright, Barkskin furbolgs, Fenwick Togglespring |
+| 57–58 Moonglade & Barkskin Burrow | Nighthaven, then the southwest | Dendrite Starblaze, Orokai, Fenwick Togglespring, Barkskin furbolgs |
+| 58–59 Elderwild & Wild Gods | West of the zone, then the Cradle of Tranquility | Sefira Everbright, Jereman, Kala'th, Marrosis |
 | 59–60 Shrine, Dae'gun & Summit | Centre, north, then the summit | Phoebe & Omnuron, Johun Dillas, Elaena, Tiala Whitemane |
 
 The route covers 116 quests and about 423,000 quest XP, plus XP from kills. It ends with one turn-in in Stormwind (*A Shaw Deal*). If you're short of 60 at the end, finish with mobs in Dae'gun or the Blackthorne camp.
