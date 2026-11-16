@@ -280,7 +280,7 @@ accept Meet the Elders##91697 |goto Mount Hyjal 21.08,80.19
 step
 talk Elder Mistpaw##256627
 turnin Meet the Elders##91697 |goto Mount Hyjal 21.77,78.98
-|tip Talk to Elder Mistpaw. Elder Pinespeaker's Wicked Wisdom needs Neutral with Barkskin Burrow, so you'll come back for it.
+|tip Talk to Elder Mistpaw. Elder Pinespeaker's and Fennar Mossmane's quests need Neutral with Barkskin Burrow, which you'll reach in a moment.
 accept Deal Dread to Deadwood##93826 |goto Mount Hyjal 21.77,78.98
 accept Barkskin Beginnings##94504 |goto Mount Hyjal 21.77,78.98
 step
@@ -289,15 +289,36 @@ accept Barkbound Blessings##93825 |goto Mount Hyjal 20.82,79.81
 step
 talk Dala Fairmaw##256629
 accept Burrow Beetles##93834 |goto Mount Hyjal 21.04,78.63
-|tip Talk to Dala Fairmaw. Fennar Mossmane's quests need Neutral, so you'll come back for them.
 step
 collect Moonveil Moss##262802 |q 93825/1
 |tip Around Barkskin Burrow, gather Moonveil Moss and Burrow Beetle Bits
 Gather 6 Burrow Beetle Bits for Dala Fairmaw. |q 93834/1
 step
+talk Suma Mossmane##260661
+turnin Barkbound Blessings##93825 |goto Mount Hyjal 20.82,79.81
+|tip Turn in to Suma Mossmane and Dala Fairmaw. Barkbound Blessings should take you to Neutral.
+talk Dala Fairmaw##256629
+turnin Burrow Beetles##93834 |goto Mount Hyjal 21.04,78.63
+step
+talk Elder Mistpaw##256627
+turnin Barkskin Beginnings##94504 |goto Mount Hyjal 21.77,78.98
+|tip Now that you're Neutral, turn in to Elder Mistpaw and pick up the quests from Elder Pinespeaker and Fennar Mossmane
+talk Elder Pinespeaker##256650
+accept Wicked Wisdom##93833 |goto Mount Hyjal 21.77,79.37
+talk Fennar Mossmane##256626
+accept Herbs of the Hollow##93828 |goto Mount Hyjal 20.16,77.99
+accept Water of Hyjal##93830 |goto Mount Hyjal 20.16,77.99
+step
+Collect 10 Dried Hanging Herbs from around Barkskin Burrow and return them to Fennar Mossmane. |q 93828/1
+|tip Collect Dried Hanging Herbs around Barkskin Burrow
+step
+collect Intact Owl Body##262816 |q 93833/1 |goto Mount Hyjal 34.80,73.90
+|tip Kill Hyjal Owls east of the burrow for Intact Owl Bodies
+step
 kill Deadwood Totemic##252116 |q 93826/1 |goto Mount Hyjal 21.40,64.90
-|tip Go to Deadwood Den. Kill Deadwood Totemics and Deadwood Fel-Tenders.
+|tip Go to Deadwood Den. Kill Deadwood Totemics and Deadwood Fel-Tenders, and fill Fennar's waterskin at the pond outside the den.
 kill Deadwood Fel-Tender##252096 |q 93826/2 |goto Mount Hyjal 21.40,64.90
+Fill a waterskin provided by Fennar Mossmane at the pond outside of the Deadwood Furbolg den. |q 93830/1 |goto Mount Hyjal 21.40,64.90
 step
 talk Barkskin Matriarch##244425
 accept Barkskin Breakout##91698 |goto Mount Hyjal 31.50,58.62
@@ -317,34 +338,8 @@ turnin Open Season##91696 |goto Mount Hyjal 20.56,71.73
 step
 talk Elder Pinespeaker##256650
 turnin Deal Dread to Deadwood##93826 |goto Mount Hyjal 21.77,79.37
-|tip Turn in to the elders, Suma Mossmane and Dala Fairmaw inside Barkskin Burrow
-talk Suma Mossmane##260661
-turnin Barkbound Blessings##93825 |goto Mount Hyjal 20.82,79.81
-talk Dala Fairmaw##256629
-turnin Burrow Beetles##93834 |goto Mount Hyjal 21.04,78.63
-step
-talk Elder Mistpaw##256627
-turnin Barkskin Beginnings##94504 |goto Mount Hyjal 21.77,78.98
-|tip You should be Neutral with Barkskin Burrow now. Turn in to Elder Mistpaw, then pick up the quests that needed Neutral from Elder Pinespeaker and Fennar Mossmane.
-|tip Still Unfriendly? Skip this step and the next four.
-talk Elder Pinespeaker##256650
-accept Wicked Wisdom##93833 |goto Mount Hyjal 21.77,79.37
-talk Fennar Mossmane##256626
-accept Herbs of the Hollow##93828 |goto Mount Hyjal 20.16,77.99
-accept Water of Hyjal##93830 |goto Mount Hyjal 20.16,77.99
-step
-Collect 10 Dried Hanging Herbs from around Barkskin Burrow and return them to Fennar Mossmane. |q 93828/1
-|tip Collect Dried Hanging Herbs around Barkskin Burrow
-step
-collect Intact Owl Body##262816 |q 93833/1 |goto Mount Hyjal 34.80,73.90
-|tip Kill Hyjal Owls east of the burrow for Intact Owl Bodies
-step
-Fill a waterskin provided by Fennar Mossmane at the pond outside of the Deadwood Furbolg den. |q 93830/1 |goto Mount Hyjal 21.40,64.90
-|tip Fill Fennar's waterskin at the pond outside Deadwood Den
-step
-talk Elder Pinespeaker##256650
-turnin Wicked Wisdom##93833 |goto Mount Hyjal 21.77,79.37
 |tip Back in Barkskin Burrow, talk to Elder Pinespeaker and Fennar Mossmane
+turnin Wicked Wisdom##93833 |goto Mount Hyjal 21.77,79.37
 talk Fennar Mossmane##256626
 turnin Herbs of the Hollow##93828 |goto Mount Hyjal 20.16,77.99
 turnin Water of Hyjal##93830 |goto Mount Hyjal 20.16,77.99
