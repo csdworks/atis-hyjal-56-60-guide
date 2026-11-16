@@ -16,7 +16,7 @@ TITLE_ROOT = "Leveling Guides\\\\Ati's Hyjal 56-60 Guide\\\\"
 # Breadcrumbs the player may or may not be carrying when they arrive.
 BREADCRUMBS = {91952, 92842}
 # Optional turn-ins that shouldn't block the step if not ready yet.
-READY_ONLY = {94504}
+READY_ONLY = set()
 
 _cache = {}
 def get(kind, i):

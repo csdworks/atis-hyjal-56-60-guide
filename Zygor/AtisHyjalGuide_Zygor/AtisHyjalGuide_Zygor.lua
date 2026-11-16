@@ -280,10 +280,9 @@ accept Meet the Elders##91697 |goto Mount Hyjal 21.08,80.19
 step
 talk Elder Mistpaw##256627
 turnin Meet the Elders##91697 |goto Mount Hyjal 21.77,78.98
+|tip Talk to Elder Mistpaw. Elder Pinespeaker's Wicked Wisdom needs Neutral with Barkskin Burrow, so you'll come back for it.
 accept Deal Dread to Deadwood##93826 |goto Mount Hyjal 21.77,78.98
 accept Barkskin Beginnings##94504 |goto Mount Hyjal 21.77,78.98
-talk Elder Pinespeaker##256650
-accept Wicked Wisdom##93833 |goto Mount Hyjal 21.77,79.37
 step
 talk Suma Mossmane##260661
 accept Barkbound Blessings##93825 |goto Mount Hyjal 20.82,79.81
@@ -299,9 +298,6 @@ collect Moonveil Moss##262802 |q 93825/1
 |tip Around Barkskin Burrow, gather Moonveil Moss, Dried Hanging Herbs and Burrow Beetle Bits
 Collect 10 Dried Hanging Herbs from around Barkskin Burrow and return them to Fennar Mossmane. |q 93828/1
 Gather 6 Burrow Beetle Bits for Dala Fairmaw. |q 93834/1
-step
-collect Intact Owl Body##262816 |q 93833/1 |goto Mount Hyjal 34.80,73.90
-|tip Kill Hyjal Owls for Intact Owl Bodies
 step
 kill Deadwood Totemic##252116 |q 93826/1 |goto Mount Hyjal 21.40,64.90
 |tip Go to Deadwood Den. Kill Deadwood Totemics and Deadwood Fel-Tenders. Fill Fennar's waterskin at the pond outside the den.
@@ -327,7 +323,6 @@ step
 talk Elder Pinespeaker##256650
 turnin Deal Dread to Deadwood##93826 |goto Mount Hyjal 21.77,79.37
 |tip Turn in to the elders and the Mossmanes inside Barkskin Burrow
-turnin Wicked Wisdom##93833 |goto Mount Hyjal 21.77,79.37
 talk Suma Mossmane##260661
 turnin Barkbound Blessings##93825 |goto Mount Hyjal 20.82,79.81
 talk Fennar Mossmane##256626
@@ -337,8 +332,17 @@ talk Dala Fairmaw##256629
 turnin Burrow Beetles##93834 |goto Mount Hyjal 21.04,78.63
 step
 talk Elder Mistpaw##256627
-turnin Barkskin Beginnings##94504 |goto Mount Hyjal 21.77,78.98 |only if readyq(94504)
-|tip If you've reached Neutral with Barkskin Burrow, turn in to Elder Mistpaw
+turnin Barkskin Beginnings##94504 |goto Mount Hyjal 21.77,78.98
+|tip You should be Neutral with Barkskin Burrow now. Turn in to Elder Mistpaw, then pick up Wicked Wisdom from Elder Pinespeaker.
+|tip Still Unfriendly? Skip this step and the next two.
+talk Elder Pinespeaker##256650
+accept Wicked Wisdom##93833 |goto Mount Hyjal 21.77,79.37
+step
+collect Intact Owl Body##262816 |q 93833/1 |goto Mount Hyjal 34.80,73.90
+|tip Kill Hyjal Owls east of the burrow for Intact Owl Bodies
+step
+talk Elder Pinespeaker##256650
+turnin Wicked Wisdom##93833 |goto Mount Hyjal 21.77,79.37
 ]])
 
 ZygorGuidesViewer:RegisterGuide("Leveling Guides\\Ati's Hyjal 56-60 Guide\\Elderwild & Wild Gods (58-59)",{

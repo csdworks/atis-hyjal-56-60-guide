@@ -395,13 +395,11 @@ step
     .target Osi Mistpaw
 step
     .goto Mount Hyjal,21.8,79.0
-    >>Talk to |cRXP_FRIENDLY_Elder Mistpaw|r and |cRXP_FRIENDLY_Elder Pinespeaker|r
+    >>Talk to |cRXP_FRIENDLY_Elder Mistpaw|r. Elder Pinespeaker's Wicked Wisdom needs Neutral with Barkskin Burrow, so you'll come back for it.
     .turnin 91697 >>Turn in Meet the Elders
     .accept 93826 >>Accept Deal Dread to Deadwood
     .accept 94504 >>Accept Barkskin Beginnings
-    .accept 93833 >>Accept Wicked Wisdom
     .target Elder Mistpaw
-    .target Elder Pinespeaker
 step
     .goto Mount Hyjal,20.82,79.81
     >>Talk to |cRXP_FRIENDLY_Suma Mossmane|r
@@ -423,11 +421,6 @@ step
     .complete 93825,1
     .complete 93828,1
     .complete 93834,1
-step
-    .goto Mount Hyjal,34.8,73.9
-    >>Kill |cRXP_ENEMY_Hyjal Owls|r for |cRXP_LOOT_Intact Owl Bodies|r
-    .complete 93833,1
-    .mob Hyjal Owl
 step
     .goto Mount Hyjal,21.4,64.9
     >>Go to Deadwood Den. Kill |cRXP_ENEMY_Deadwood Totemics|r and |cRXP_ENEMY_Deadwood Fel-Tenders|r. Fill Fennar's waterskin at the pond outside the den.
@@ -462,7 +455,6 @@ step
     .goto Mount Hyjal,21.8,79.0
     >>Turn in to the elders and the Mossmanes inside Barkskin Burrow
     .turnin 93826 >>Turn in Deal Dread to Deadwood
-    .turnin 93833 >>Turn in Wicked Wisdom
     .turnin 93825 >>Turn in Barkbound Blessings
     .turnin 93828 >>Turn in Herbs of the Hollow
     .turnin 93830 >>Turn in Water of Hyjal
@@ -473,11 +465,23 @@ step
     .target Fennar Mossmane
     .target Dala Fairmaw
 step
-    #optional
     .goto Mount Hyjal,21.8,79.0
-    >>If you've reached Neutral with Barkskin Burrow, turn in to |cRXP_FRIENDLY_Elder Mistpaw|r
+    >>You should be Neutral with Barkskin Burrow now. Turn in to |cRXP_FRIENDLY_Elder Mistpaw|r, then pick up Wicked Wisdom from |cRXP_FRIENDLY_Elder Pinespeaker|r.
+    >>Still Unfriendly? Skip this step and the next two.
     .turnin 94504 >>Turn in Barkskin Beginnings
+    .accept 93833 >>Accept Wicked Wisdom
     .target Elder Mistpaw
+    .target Elder Pinespeaker
+step
+    .goto Mount Hyjal,34.8,73.9
+    >>Kill |cRXP_ENEMY_Hyjal Owls|r east of the burrow for |cRXP_LOOT_Intact Owl Bodies|r
+    .complete 93833,1
+    .mob Hyjal Owl
+step
+    .goto Mount Hyjal,21.77,79.37
+    >>Talk to |cRXP_FRIENDLY_Elder Pinespeaker|r
+    .turnin 93833 >>Turn in Wicked Wisdom
+    .target Elder Pinespeaker
 ]])
 
 -------------------------------------------------------------------------------
