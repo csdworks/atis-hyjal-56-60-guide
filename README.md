@@ -9,7 +9,7 @@ An Alliance leveling route through WoW Forever's **Mount Hyjal**. It comes in tw
 | **RestedXP Compatible** | `RestedXP/AtisHyjalGuide_RXP` | RestedXP Guides (`RXPGuides`) |
 | **Zygor Compatible** | `Zygor/AtisHyjalGuide_Zygor` | Zygor Guides Viewer (Forever) |
 
-> **Status: first draft (v0.1.1), not yet tested in game.** Quest IDs, NPCs and coordinates come from the QuestieDB Forever database. The route order has been checked against each quest's prerequisites.
+> **Status: first draft (v0.1.2), not yet tested in game.** Quest IDs, NPCs and coordinates come from the QuestieDB Forever database. The route order has been checked against each quest's prerequisites.
 
 ## Install
 
