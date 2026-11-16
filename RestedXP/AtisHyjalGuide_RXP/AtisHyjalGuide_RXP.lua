@@ -515,20 +515,6 @@ step
     .accept 95027 >>Accept Feathers in Flight
     .target Hnaz Blunderflame
 step
-    .goto Mount Hyjal,15.9,52.7
-    >>Talk to |cRXP_FRIENDLY_Mirt|r
-    .accept 96674 >>Accept Ewe Wandered Off
-    .target Mirt
-step
-    .goto Mount Hyjal,13.3,51.3
-    >>Capture the |cRXP_FRIENDLY_Escaped Sheep|r around the outpost and bring them back
-    .complete 96674,1
-step
-    .goto Mount Hyjal,15.9,52.7
-    >>Talk to |cRXP_FRIENDLY_Mirt|r
-    .turnin 96674 >>Turn in Ewe Wandered Off
-    .target Mirt
-step
     .goto Mount Hyjal,20.47,59.26
     >>Talk to the |cRXP_FRIENDLY_Veteran of the Third War|r
     .accept 92100 >>Accept Anywhere But Here

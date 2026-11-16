@@ -369,15 +369,6 @@ step
 talk Hnaz Blunderflame##249968
 accept Feathers in Flight##95027 |goto Mount Hyjal 15.64,49.99
 step
-talk Mirt##248419
-accept Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72
-step
-kill Escaped Sheep##265962 |q 96674/1 |goto Mount Hyjal 13.30,51.30
-|tip Capture the Escaped Sheep around the outpost and bring them back
-step
-talk Mirt##248419
-turnin Ewe Wandered Off##96674 |goto Mount Hyjal 15.93,52.72
-step
 talk Veteran of the Third War##255009
 accept Anywhere But Here##92100 |goto Mount Hyjal 20.47,59.26
 step

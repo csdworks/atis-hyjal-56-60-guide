@@ -31,7 +31,7 @@ An Alliance leveling route through WoW Forever's **Mount Hyjal**. It comes in tw
 | 58–59 Elderwild & Wild Gods | West of the zone, then the Cradle of Tranquility | Sefira Everbright, Jereman, Kala'th, Marrosis |
 | 59–60 Shrine, Dae'gun & Summit | Centre, north, then the summit | Phoebe & Omnuron, Johun Dillas, Elaena, Tiala Whitemane |
 
-The route covers 116 quests and about 423,000 quest XP, plus XP from kills. It ends with one turn-in in Stormwind (*A Shaw Deal*). If you're short of 60 at the end, finish with mobs in Dae'gun or the Blackthorne camp.
+The route covers 115 quests and about 420,000 quest XP, plus XP from kills. It ends with one turn-in in Stormwind (*A Shaw Deal*). If you're short of 60 at the end, finish with mobs in Dae'gun or the Blackthorne camp.
 
 **Barkskin Burrow reputation:** *Wicked Wisdom*, *Herbs of the Hollow*, *Water of Hyjal* and *Burrow Beetles* need Neutral with Barkskin Burrow. The furbolg quests you can do while Unfriendly leave you about 1,100 rep short, so those four steps only show up if you're already Neutral. Otherwise the guide skips them.
 
@@ -40,6 +40,7 @@ The route covers 116 quests and about 423,000 quest XP, plus XP from kills. It e
 - **Kaylaena's Everlook chain** (*Premiere Parts* → … → *Drum Up Trouble*). It needs a trip to Everlook and a timed delivery back.
 - **Sebelia's mail run** to Everlook.
 - **The veteran's out-of-zone quests** (*Lifted by Legacy*, *Wake Memories*, *Praise*, *Ends Meet*, *Soldier's Solace*).
+- **Ewe Wandered Off** (Mirt in Elderwild). It has a prerequisite that the quest data doesn't list, so it isn't always available.
 - **Windswept Wards**, **Belle's Ring** (the Elwynn delivery), **Unsealing Blackthorne Pact**, **Now We're Cooking**, **Return to Jereman** and **Burrow Bonding**.
 
 ## For contributors
