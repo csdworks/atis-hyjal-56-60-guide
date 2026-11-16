@@ -259,8 +259,10 @@ talk Galvinquam Leafsyre##267109
 turnin Sacred Refreshment##96979 |goto Mount Hyjal 32.89,54.44
 accept Trail Assist##96991 |goto Mount Hyjal 32.89,54.44
 step
-collect Sun-Bleached Bone##275927 |q 96957/1 |goto Mount Hyjal 27.10,50.00
+collect Sun-Bleached Bone##275927 |q 96957/1 |goto Mount Hyjal 24.00,54.80
 |tip Collect Sun-Bleached Bones around Mourning's Rest
+|tip In the Scourge ruins just southwest, kill Forgotten Soldiers, Fleshflay Raveners or Death Wailers until one drops a Drop of Stolen Life
+collect Drop of Stolen Life##272973 |q 92317/1 |goto Mount Hyjal 24.00,54.80
 step
 talk Marrosis##267113
 turnin Bone Sweet Bone##96957 |goto Mount Hyjal 27.10,49.99
@@ -312,10 +314,9 @@ talk Eluneth##264089
 accept Eyes of the Watchers##90865 |goto Mount Hyjal 18.78,62.01
 step
 kill Forgotten Soldier##249247 |q 92449/1 |goto Mount Hyjal 18.00,60.40
-|tip Kill Forgotten Soldiers and Fleshflay Raveners. Raveners drop the Ring of the Fallen Soldier, and the Scourge here drop a Drop of Stolen Life.
+|tip Kill Forgotten Soldiers and Fleshflay Raveners. Raveners drop the Ring of the Fallen Soldier.
 kill Fleshflay Ravener##249228 |q 92449/2 |goto Mount Hyjal 18.00,60.40
 collect Ring of the Fallen Soldier##273642 |q 90702/1 |goto Mount Hyjal 18.00,60.40
-collect Drop of Stolen Life##272973 |q 92317/1 |goto Mount Hyjal 18.00,60.40
 step
 collect Watcher's Eye##273322 |q 90865/1 |goto Mount Hyjal 24.50,53.80
 |tip Kill Eternal Sentries for Watcher's Eyes

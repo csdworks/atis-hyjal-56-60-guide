@@ -382,9 +382,14 @@ step
     .accept 96991 >>Accept Trail Assist
     .target Galvinquam Leafsyre
 step
-    .goto Mount Hyjal,27.1,50.0
+    .goto Mount Hyjal,24.0,54.8
     >>Collect |cRXP_LOOT_Sun-Bleached Bones|r around Mourning's Rest
+    >>In the Scourge ruins just southwest, kill |cRXP_ENEMY_Forgotten Soldiers|r, |cRXP_ENEMY_Fleshflay Raveners|r or |cRXP_ENEMY_Death Wailers|r until one drops a |cRXP_LOOT_Drop of Stolen Life|r
     .complete 96957,1
+    .complete 92317,1
+    .mob Forgotten Soldier
+    .mob Fleshflay Ravener
+    .mob Death Wailer
 step
     .goto Mount Hyjal,27.1,50.0
     >>Talk to |cRXP_FRIENDLY_Marrosis|r
@@ -459,11 +464,10 @@ step
     .target Eluneth
 step
     .goto Mount Hyjal,18.0,60.4
-    >>Kill |cRXP_ENEMY_Forgotten Soldiers|r and |cRXP_ENEMY_Fleshflay Raveners|r. Raveners drop the |cRXP_LOOT_Ring of the Fallen Soldier|r, and the Scourge here drop a |cRXP_LOOT_Drop of Stolen Life|r.
+    >>Kill |cRXP_ENEMY_Forgotten Soldiers|r and |cRXP_ENEMY_Fleshflay Raveners|r. Raveners drop the |cRXP_LOOT_Ring of the Fallen Soldier|r.
     .complete 92449,1
     .complete 92449,2
     .complete 90702,1
-    .complete 92317,1
     .mob Forgotten Soldier
     .mob Fleshflay Ravener
 step
