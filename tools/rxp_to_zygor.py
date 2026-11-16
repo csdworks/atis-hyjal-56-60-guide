@@ -106,6 +106,10 @@ def convert_step(lines, pending_tips):
         if m: loc = (m.group(1), float(m.group(2)), float(m.group(3)))
         m = re.match(r"\.isOnQuest (\d+)", l)
         if m: only = f"haveq({m.group(1)})"
+        m = re.match(r"\.reputation (\d+),(\w+),<0,1", l)
+        if m:
+            cond = f"rep({m.group(1)})>={m.group(2).capitalize()}"
+            only = f"{only} and {cond}" if only else cond
 
     def add(key, line):
         if key not in talks:

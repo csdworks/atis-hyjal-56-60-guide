@@ -395,10 +395,10 @@ step
     .target Osi Mistpaw
 step
     .goto Mount Hyjal,21.8,79.0
-    >>Talk to |cRXP_FRIENDLY_Elder Mistpaw|r. Elder Pinespeaker's, Fennar Mossmane's and Dala Fairmaw's quests need Neutral with Barkskin Burrow, which you'll reach in a moment.
+    >>Talk to |cRXP_FRIENDLY_Elder Mistpaw|r
+    >>Elder Pinespeaker's, Fennar Mossmane's and Dala Fairmaw's quests need Neutral with Barkskin Burrow. These furbolg quests leave you about 1,100 rep short, so the guide only shows those quests if you're already Neutral.
     .turnin 91697 >>Turn in Meet the Elders
     .accept 93826 >>Accept Deal Dread to Deadwood
-    .accept 94504 >>Accept Barkskin Beginnings
     .target Elder Mistpaw
 step
     .goto Mount Hyjal,20.82,79.81
@@ -409,37 +409,10 @@ step
     >>Around Barkskin Burrow, gather |cRXP_LOOT_Moonveil Moss|r
     .complete 93825,1
 step
-    .goto Mount Hyjal,20.82,79.81
-    >>Turn in to |cRXP_FRIENDLY_Suma Mossmane|r. Barkbound Blessings should take you to Neutral.
-    .turnin 93825 >>Turn in Barkbound Blessings
-    .target Suma Mossmane
-step
-    .goto Mount Hyjal,21.8,79.0
-    >>Now that you're Neutral, turn in to |cRXP_FRIENDLY_Elder Mistpaw|r and pick up the quests from |cRXP_FRIENDLY_Elder Pinespeaker|r, |cRXP_FRIENDLY_Fennar Mossmane|r and |cRXP_FRIENDLY_Dala Fairmaw|r
-    .turnin 94504 >>Turn in Barkskin Beginnings
-    .accept 93833 >>Accept Wicked Wisdom
-    .accept 93828 >>Accept Herbs of the Hollow
-    .accept 93830 >>Accept Water of Hyjal
-    .accept 93834 >>Accept Burrow Beetles
-    .target Elder Mistpaw
-    .target Elder Pinespeaker
-    .target Fennar Mossmane
-    .target Dala Fairmaw
-step
-    >>Collect |cRXP_LOOT_Dried Hanging Herbs|r and |cRXP_LOOT_Burrow Beetle Bits|r around Barkskin Burrow
-    .complete 93828,1
-    .complete 93834,1
-step
-    .goto Mount Hyjal,34.8,73.9
-    >>Kill |cRXP_ENEMY_Hyjal Owls|r east of the burrow for |cRXP_LOOT_Intact Owl Bodies|r
-    .complete 93833,1
-    .mob Hyjal Owl
-step
     .goto Mount Hyjal,21.4,64.9
-    >>Go to Deadwood Den. Kill |cRXP_ENEMY_Deadwood Totemics|r and |cRXP_ENEMY_Deadwood Fel-Tenders|r, and fill Fennar's waterskin at the pond outside the den.
+    >>Go to Deadwood Den. Kill |cRXP_ENEMY_Deadwood Totemics|r and |cRXP_ENEMY_Deadwood Fel-Tenders|r.
     .complete 93826,1
     .complete 93826,2
-    .complete 93830,1
     .mob Deadwood Totemic
     .mob Deadwood Fel-Tender
 step
@@ -466,8 +439,45 @@ step
     .target Brerufa
 step
     .goto Mount Hyjal,21.77,79.37
-    >>Back in Barkskin Burrow, talk to |cRXP_FRIENDLY_Elder Pinespeaker|r, |cRXP_FRIENDLY_Fennar Mossmane|r and |cRXP_FRIENDLY_Dala Fairmaw|r
+    >>Back in Barkskin Burrow, turn in to |cRXP_FRIENDLY_Suma Mossmane|r and |cRXP_FRIENDLY_Elder Pinespeaker|r
+    .turnin 93825 >>Turn in Barkbound Blessings
     .turnin 93826 >>Turn in Deal Dread to Deadwood
+    .target Suma Mossmane
+    .target Elder Pinespeaker
+step
+    .goto Mount Hyjal,21.8,79.0
+    .reputation 2747,neutral,<0,1
+    >>You're Neutral with Barkskin Burrow, so pick up the quests that needed it. Elder Mistpaw's Barkskin Beginnings completes straight away.
+    .accept 94504 >>Accept Barkskin Beginnings
+    .turnin 94504 >>Turn in Barkskin Beginnings
+    .accept 93833 >>Accept Wicked Wisdom
+    .accept 93828 >>Accept Herbs of the Hollow
+    .accept 93830 >>Accept Water of Hyjal
+    .accept 93834 >>Accept Burrow Beetles
+    .target Elder Mistpaw
+    .target Elder Pinespeaker
+    .target Fennar Mossmane
+    .target Dala Fairmaw
+step
+    .reputation 2747,neutral,<0,1
+    >>Collect |cRXP_LOOT_Dried Hanging Herbs|r and |cRXP_LOOT_Burrow Beetle Bits|r around Barkskin Burrow
+    .complete 93828,1
+    .complete 93834,1
+step
+    .goto Mount Hyjal,34.8,73.9
+    .reputation 2747,neutral,<0,1
+    >>Kill |cRXP_ENEMY_Hyjal Owls|r east of the burrow for |cRXP_LOOT_Intact Owl Bodies|r
+    .complete 93833,1
+    .mob Hyjal Owl
+step
+    .goto Mount Hyjal,21.4,64.9
+    .reputation 2747,neutral,<0,1
+    >>Fill Fennar's waterskin at the pond outside Deadwood Den
+    .complete 93830,1
+step
+    .goto Mount Hyjal,21.77,79.37
+    .reputation 2747,neutral,<0,1
+    >>Back in Barkskin Burrow, talk to |cRXP_FRIENDLY_Elder Pinespeaker|r, |cRXP_FRIENDLY_Fennar Mossmane|r and |cRXP_FRIENDLY_Dala Fairmaw|r
     .turnin 93833 >>Turn in Wicked Wisdom
     .turnin 93828 >>Turn in Herbs of the Hollow
     .turnin 93830 >>Turn in Water of Hyjal

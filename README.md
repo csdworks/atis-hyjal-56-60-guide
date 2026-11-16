@@ -33,6 +33,8 @@ An Alliance leveling route through WoW Forever's **Mount Hyjal**. It comes in tw
 
 The route covers 116 quests and about 423,000 quest XP, plus XP from kills. It ends with one turn-in in Stormwind (*A Shaw Deal*). If you're short of 60 at the end, finish with mobs in Dae'gun or the Blackthorne camp.
 
+**Barkskin Burrow reputation:** *Wicked Wisdom*, *Herbs of the Hollow*, *Water of Hyjal* and *Burrow Beetles* need Neutral with Barkskin Burrow. The furbolg quests you can do while Unfriendly leave you about 1,100 rep short, so those four steps only show up if you're already Neutral. Otherwise the guide skips them.
+
 ### Left out on purpose
 
 - **Kaylaena's Everlook chain** (*Premiere Parts* → … → *Drum Up Trouble*). It needs a trip to Everlook and a timed delivery back.
