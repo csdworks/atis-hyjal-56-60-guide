@@ -185,21 +185,9 @@ step
     .accept 95319 >>Accept Crystalline Collection
     .target Felflick
 step
-    .goto Mount Hyjal,48.3,85.7
-    >>Talk to the |cRXP_FRIENDLY_Curious Crow|r
-    .turnin 95317 >>Turn in Notation, Notation, Notation
-    .accept 95380 >>Accept A Prolific Source
-    .accept 96262 >>Accept Prickly Pinecones
-    .target Curious Crow
-step
-    .goto Mount Hyjal,48.4,77.8
-    >>Kill |cRXP_ENEMY_Noxious Slimes|r for |cRXP_LOOT_Fel-Slime Ooze|r and gather |cRXP_LOOT_Fel-Slime Crystals|r around the slime pools
-    >>Collect |cRXP_LOOT_Prickly Pinecones|r from under the healthy trees
-    .complete 95380,1
+    >>Gather |cRXP_LOOT_Fel-Slime Crystals|r and a |cRXP_LOOT_Pristine Fel-Slime Crystal|r near Felflick
     .complete 95319,1
     .complete 95319,2
-    .complete 96262,1
-    .mob Noxious Slime
 step
     .goto Mount Hyjal,48.6,73.5
     >>Talk to |cRXP_FRIENDLY_Felflick|r
@@ -207,6 +195,20 @@ step
     .accept 95378 >>Accept The Hydra's Head
     .accept 95379 >>Accept A Revenge So Sweet
     .target Felflick
+step
+    .goto Mount Hyjal,48.3,85.7
+    >>Head south to the |cRXP_FRIENDLY_Curious Crow|r
+    .turnin 95317 >>Turn in Notation, Notation, Notation
+    .accept 95380 >>Accept A Prolific Source
+    .accept 96262 >>Accept Prickly Pinecones
+    .target Curious Crow
+step
+    .goto Mount Hyjal,48.4,77.8
+    >>Kill |cRXP_ENEMY_Noxious Slimes|r around the slime pools for |cRXP_LOOT_Fel-Slime Ooze|r
+    >>Collect |cRXP_LOOT_Prickly Pinecones|r from under the healthy trees
+    .complete 95380,1
+    .complete 96262,1
+    .mob Noxious Slime
 step
     .goto Mount Hyjal,45.6,69.9
     >>Kill the three warlocks |cRXP_ENEMY_Tyaeha Darkoath|r, |cRXP_ENEMY_Dazka Shadowsleep|r and |cRXP_ENEMY_Frezzlie Popwhiz|r and loot their bones

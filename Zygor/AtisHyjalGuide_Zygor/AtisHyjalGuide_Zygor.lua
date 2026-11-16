@@ -125,22 +125,25 @@ talk Felflick##263757
 turnin Taste of Ash##95318 |goto Mount Hyjal 48.58,73.54
 accept Crystalline Collection##95319 |goto Mount Hyjal 48.58,73.54
 step
-talk Curious Crow##257753
-turnin Notation, Notation, Notation##95317 |goto Mount Hyjal 48.26,85.72
-accept A Prolific Source##95380 |goto Mount Hyjal 48.26,85.72
-accept Prickly Pinecones##96262 |goto Mount Hyjal 48.26,85.72
-step
-collect Fel-Slime Ooze##273008 |q 95380/1 |goto Mount Hyjal 48.40,77.80
-|tip Kill Noxious Slimes for Fel-Slime Ooze and gather Fel-Slime Crystals around the slime pools
-|tip Collect Prickly Pinecones from under the healthy trees
-collect Fel-Slime Crystal##274412 |q 95319/1 |goto Mount Hyjal 48.40,77.80
-collect Pristine Fel-Slime Crystal##268990 |q 95319/2 |goto Mount Hyjal 48.40,77.80
-collect Prickly Pinecone##273304 |q 96262/1 |goto Mount Hyjal 48.40,77.80
+collect Fel-Slime Crystal##274412 |q 95319/1
+|tip Gather Fel-Slime Crystals and a Pristine Fel-Slime Crystal near Felflick
+collect Pristine Fel-Slime Crystal##268990 |q 95319/2
 step
 talk Felflick##263757
 turnin Crystalline Collection##95319 |goto Mount Hyjal 48.58,73.54
 accept The Hydra's Head##95378 |goto Mount Hyjal 48.58,73.54
 accept A Revenge So Sweet##95379 |goto Mount Hyjal 48.58,73.54
+step
+talk Curious Crow##257753
+turnin Notation, Notation, Notation##95317 |goto Mount Hyjal 48.26,85.72
+|tip Head south to the Curious Crow
+accept A Prolific Source##95380 |goto Mount Hyjal 48.26,85.72
+accept Prickly Pinecones##96262 |goto Mount Hyjal 48.26,85.72
+step
+collect Fel-Slime Ooze##273008 |q 95380/1 |goto Mount Hyjal 48.40,77.80
+|tip Kill Noxious Slimes around the slime pools for Fel-Slime Ooze
+|tip Collect Prickly Pinecones from under the healthy trees
+collect Prickly Pinecone##273304 |q 96262/1 |goto Mount Hyjal 48.40,77.80
 step
 collect Bones of Tyaeha Darkoath##273291 |q 95378/1 |goto Mount Hyjal 45.60,69.90
 |tip Kill the three warlocks Tyaeha Darkoath, Dazka Shadowsleep and Frezzlie Popwhiz and loot their bones
